@@ -60,7 +60,7 @@ public:
         }
 
         if (matrix[0][0] == 0) {
-            for (int j = 1; j < m; j++) {
+            for (int j = 0; j < m; j++) {
                 matrix[0][j] = 0;
             }
         }
