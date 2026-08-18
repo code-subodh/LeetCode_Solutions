@@ -13,7 +13,7 @@ public:
             if (target > arr[mid]) {
                 // right mein jao
                 s = mid + 1;
-            } else if (target < arr[mid]) {
+            } if(target < arr[mid]) {
                 // left mein jao
                 e = mid - 1;
             }
