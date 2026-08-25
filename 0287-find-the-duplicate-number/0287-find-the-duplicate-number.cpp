@@ -1,13 +1,16 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        // // Method 1
-        // sort(nums.begin(), nums.end());
-        // for (int i = 0; i < nums.size() - 1; i++) {
-        //     if (nums[i] == nums[i + 1])
-        //         return nums[i];
-        // }
-        // return -1;
+        // Method 1
+        int ans;
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size() - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                ans = nums[i];
+                break;
+            }
+        }
+        return ans;
 
         // // Method 2  Mark Index Negative..
         // int ans = -1;
@@ -29,17 +32,16 @@ public:
         // }
         // return nums[0];
 
-        // using Hash Map
-        unordered_map<int, int> freq;
-        for (int i = 0; i < nums.size(); i++) {
-            freq[nums[i]]++;
-        }
-
-        for (int i = 0; i < nums.size(); i++) {
-            if (freq[nums[i]] > 1) {
-                return nums[i];
-            }
-        }
-        return -1;
+        // // using Hash Map
+        // unordered_map<int, int> freq;
+        // int ans;
+        // for (int i = 0; i < nums.size(); i++) {
+        //     freq[nums[i]]++;
+        //     if (freq[nums[i]] > 1) {
+        //         ans = nums[i];
+        //         break;
+        //     }
+        // }
+        // return ans;
     }
 };
