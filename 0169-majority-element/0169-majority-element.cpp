@@ -13,15 +13,8 @@ public:
             }
         }
         return ans;
-        // int max_count = INT_MIN;
-        // int ans = INT_MIN;
-        // for (int i = 0; i < nums.size(); i++) {
-        //     if (freq[nums[i]] > max_count) {
-        //         max_count = freq[nums[i]];
-        //         ans = nums[i];
-        //     }
-        // }
-        // return ans;
+        
+
 
         // // Optimal solution
         // int condidate = 0;
